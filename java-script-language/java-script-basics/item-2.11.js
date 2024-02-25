@@ -81,18 +81,26 @@
  */
 
 
-// const login = prompt('Логин', '');
-// let password;
+const login = prompt('Логин', '');
+
+const checkPassword = (password) => {
+    if (password === 'Я главный') {
+        alert('Здравствуйте!');
+    } else if (password === null || password === '') {
+        alert('Отменено');
+    } else {
+        alert('Неверный пароль');
+    }
+};
+
+if (login === 'Админ') {
+    const password = prompt('Пароль', '');
+
+    checkPassword(password);
+} else if (login === null || login === '') {
+    alert('Отменено');
+} else {
+    alert('Я вас не знаю');
+}
 
 
-// if (login === 'Админ') {
-//     password = prompt('Пароль', '');
-// }
-
-// if (password === 'Я главный') {
-//     alert('Здравствуйте!');
-// } else if (login === '' || login === null || password === '' || password === null) {
-//     alert('Отменено');
-// } else {
-//     alert('Неверный пароль');
-// };
