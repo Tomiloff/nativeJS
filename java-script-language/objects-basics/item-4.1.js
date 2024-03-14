@@ -32,4 +32,38 @@ for (let key in salaries) {
     sum += salaries[key];
 }
 
-console.log(sum)
+// console.log(sum)
+
+
+
+// 5
+// Создайте функцию multiplyNumeric(obj), которая умножает все числовые свойства объекта obj на 2.
+
+let menu = {
+    width: 200,
+    height: 300,
+    title: "My menu"
+};
+
+const multiplyNumeric = (object) => {
+    const resultObject = {};
+
+    for (let key in object) {
+        if (typeof object[key] === 'number') {
+            resultObject[key] = object[key] * 2;
+        } else {
+            resultObject[key] = object[key];
+        }
+    }
+
+    return resultObject;
+};
+
+multiplyNumeric(menu);
+
+
+for (let prop in menu) {
+    if (typeof prop === 'number') {
+        menu[prop] *= 2;
+    }
+}
