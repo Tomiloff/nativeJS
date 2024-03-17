@@ -52,4 +52,10 @@ let ladder = {
 // ladder.up().up().down().showStep().down().showStep(); показывает 1 затем 0
 
 
-ladder.up().up().down().showStep().down().showStep();
+ladder
+    .up()
+    .up()
+    .down()
+    .showStep()
+    .down()
+    .showStep();
