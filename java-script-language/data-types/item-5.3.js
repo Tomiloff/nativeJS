@@ -75,4 +75,36 @@ const checkSpam = (string) => {
     return convertedString.includes(spam1) || convertedString.includes(spam2);
 }
 
-console.log(checkSpam('buy ViAgRAa now'));
+// console.log(checkSpam('buy ViAgRAa now'));
+
+// 3
+// Создайте функцию truncate(str, maxlength), которая проверяет длину строки str и, если она превосходит maxlength, заменяет конец str на "…", так, чтобы её длина стала равна maxlength.
+//
+//     Результатом функции должна быть та же строка, если усечение не требуется, либо, если необходимо, усечённая строка.
+
+const truncate = (str, maxlength) => {
+    const lengthStr = str.length;
+    const startPosition = 0;
+    const endPosition = --maxlength;
+
+    if (lengthStr > maxlength) {
+        return `${str.slice(startPosition, endPosition)}...`;
+    }
+
+    return str;
+};
+
+//console.log(truncate('Вот, что мне хотелось бы сказать на эту тему:', 20))
+
+
+// 4
+// Есть стоимость в виде строки "$120". То есть сначала идёт знак валюты, а затем – число.
+//
+//     Создайте функцию extractCurrencyValue(str), которая будет из такой строки выделять числовое значение и возвращать его.
+
+
+const extractCurrencyValue = (str) => {
+    return +str.slice(1);
+}
+
+console.log(extractCurrencyValue("$120"));
