@@ -50,4 +50,30 @@ const sumInput = () => {
     return sumNumbers;
 }
 
-console.log(sumInput());
+// console.log(sumInput());
+
+// 5
+
+// На входе массив чисел, например: arr = [1, -2, 3, 4, -9, 6].
+//
+//     Задача: найти непрерывный подмассив в arr, сумма элементов в котором максимальна.
+//
+//     Функция getMaxSubSum(arr) должна возвращать эту сумму.
+
+
+const getMaxSubSum = (arr) => {
+    const filteredNumbers = [];
+    const sumNumbers = 0;
+
+    while (arr.length !== 0) {
+        const maxNumber = Math.max.apply(null, arr);
+        const indexNumber = arr.indexOf(maxNumber);
+
+        filteredNumbers.push(maxNumber);
+        arr.splice(indexNumber, 1);
+    }
+
+    console.log(filteredNumbers);
+}
+
+getMaxSubSum([1, -2, 3, 4, -9, 6]);
