@@ -62,18 +62,19 @@ const sumInput = () => {
 
 
 const getMaxSubSum = (arr) => {
-    const filteredNumbers = [];
-    const sumNumbers = 0;
+    let sumNumbers = 0;
+    let checkSum = 0;
 
-    while (arr.length !== 0) {
-        const maxNumber = Math.max.apply(null, arr);
-        const indexNumber = arr.indexOf(maxNumber);
+    for (number of arr) {
+        checkSum += number;
+        sumNumbers = Math.max(sumNumbers, checkSum);
 
-        filteredNumbers.push(maxNumber);
-        arr.splice(indexNumber, 1);
+        if (checkSum < 0) {
+            checkSum = 0;
+        }
     }
 
-    console.log(filteredNumbers);
+    return sumNumbers;
 }
 
-getMaxSubSum([1, -2, 3, 4, -9, 6]);
+console.log(getMaxSubSum([100, -9, 2, -3, 5]));
