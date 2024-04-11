@@ -1,17 +1,30 @@
 // 1
 
 const camelize = (string) => {
-    const stringWithSplit = string.split('');
+    const words = string.split('-');
+    const result = words.map((word, index) => {
+        return index === 0 ? word : word.charAt(0).toUpperCase() + word.slice(1);
+    });
 
-    const hyphenIndex = stringWithSplit.indexOf('-');
-    const validLetterIndex = hyphenIndex + 1;
-    const validLetter = stringWithSplit.find((letter) => letter ===stringWithSplit.at(validLetterIndex));
-    const changedLetter = validLetter.toUpperCase();
+    // words.forEach((letter, index, array) => {
+    //     if (letter === '-') {
+    //         array.splice(index, 1);
+    //
+    //         const temporaryLetter = array.at(index);
+    //         array.splice(index, 1, temporaryLetter.toUpperCase());
+    //     }
+    // });
 
-    stringWithSplit.splice(validLetterIndex, 1, changedLetter);
-    stringWithSplit.splice(hyphenIndex, 1);
+    // for (let i = 0; i < convertedString.length; i++) {
+    //     if (convertedString.at(i) === '-') {
+    //         convertedString.splice(i, 1);
+    //
+    //         const temporaryLetter = convertedString.at(i);
+    //         convertedString.splice(i, 1, temporaryLetter.toUpperCase());
+    //     }
+    // }
 
-    return stringWithSplit.join('');
+    return result.join('');
 }
 
-console.log(camelize('background-color'))
+console.log(camelize('list-style-image'))
