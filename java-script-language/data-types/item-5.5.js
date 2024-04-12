@@ -27,4 +27,39 @@ const camelize = (string) => {
     return result.join('');
 }
 
-console.log(camelize('list-style-image'))
+// console.log(camelize('list-style-image'))
+
+// 2
+const arr = [5, 3, 8, 1];
+
+const filterRange = (array, a, b) => {
+    if (a && b) {
+        return array.filter((element) => element >= a && element <= b);
+    }
+
+    return array;
+}
+
+const filtered = filterRange(arr, 1, 4);
+
+// console.log(filtered)
+
+// 3 Фильтрация по диапазону "на месте"
+
+const testArray = [5, 3, 8, 1];
+
+const filterRangeInPlace = (array, a, b) => {
+    array.forEach((number, index) => {
+        if (number <= a || number >= b) {
+            array.splice(index, 1);
+        }
+    })
+}
+
+filterRangeInPlace(testArray, 1, 4);
+
+console.log(testArray)
+
+
+
+
