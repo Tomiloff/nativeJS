@@ -167,13 +167,77 @@ calc.addMethod('**', (a, b) => a ** b);
 
 const result = calc.calculate("2 ** 3");
 
-console.log(result)
+// console.log(result)
+
+// 7
+// Трансформировать в массив имён
+
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 28 };
+//
+// let users = [ vasya, petya, masha ];
+//
+// const names = users.map(user => user.name);
+
+// console.log(names)
+
+
+// 8
+// Трансформировать в объекты
+
+// let vasya = { name: "Вася", surname: "Пупкин", id: 1 };
+// let petya = { name: "Петя", surname: "Иванов", id: 2 };
+// let masha = { name: "Маша", surname: "Петрова", id: 3 };
+//
+// let users = [ vasya, petya, masha ];
+
+// const usersMapped = users.map((user) => ({
+//         id: user.id,
+//         fullName: `${user.name} ${user.surname}`,
+// }))
+
+// console.log(usersMapped)
+
+// 9
+// Отсортировать пользователей по возрасту
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 28 };
+//
+// let arrayFriends = [ vasya, petya, masha ];
+//
+// const sortByAge = (users) => {
+//     users.sort((a, b) => a.age - b.age);
+// }
+//
+// sortByAge(arrayFriends)
+//
+// console.log(arrayFriends)
 
 
 
+// 10
+// Перемешайте массив
 
+let arrTest = [1, 2, 3];
 
-
-
-
-
+// const random = (min, max) => {
+//     return min + Math.random() * (max - min);
+// }
+//
+// const shuffle = (array) => {
+//     array.sort((a, b) => {
+//         if (a > b) {
+//             return random(-1, 1);
+//         }
+//
+//         if (a < b) {
+//             return random(-1, 1);
+//         }
+//     });
+// }
+//
+// shuffle(arrTest);
+//
+// console.log(arrTest)
