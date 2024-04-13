@@ -58,8 +58,27 @@ const filterRangeInPlace = (array, a, b) => {
 
 filterRangeInPlace(testArray, 1, 4);
 
-console.log(testArray)
+// console.log(testArray)
 
 
+// 4 Сортировать в порядке по убыванию
+// arr.sort(functionCompare);
+// От переданной функции сравнения(functionCompare) требуется любое положительное число,
+// чтобы сказать «больше», и отрицательное число, чтобы сказать «меньше».
+const  arrayNumbers = [5, 2, 1, -10, 8];
 
+arrayNumbers.sort((a, b) => a - b);
+
+// console.log(arrayNumbers)
+
+
+// 5 Скопировать и отсортировать массив
+
+let arrayLanguages = ["HTML", "JavaScript", "CSS"];
+
+const copySorted = (array) => {
+    const newArray = [...array];
+
+    return newArray.sort();
+}
 
