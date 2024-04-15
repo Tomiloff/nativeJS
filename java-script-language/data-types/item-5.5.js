@@ -241,3 +241,68 @@ let arrTest = [1, 2, 3];
 // shuffle(arrTest);
 //
 // console.log(arrTest)
+
+
+// 11 Получить средний возраст
+
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 29 };
+//
+// let arrayPersons = [ vasya, petya, masha ];
+//
+// const getAverageAge = (users) => {
+//     const sumAges = users.reduce((sum, currentPerson) => sum + currentPerson.age, 0);
+//
+//     return sumAges / users.length;
+// }
+//
+// console.log(getAverageAge(arrayPersons))
+
+
+// 12 Оставить уникальные элементы массива
+
+const unique = (array) => {
+    const uniqueStrings = [];
+
+    array.forEach((string) => {
+        !uniqueStrings.includes(string) ? uniqueStrings.push(string) : null;
+    });
+
+    return uniqueStrings;
+}
+
+let strings = ["кришна", "кришна", "харе", "харе",
+    "харе", "харе", "кришна", "кришна", ":-O"
+];
+
+// console.log(unique(strings));
+
+// 13 Создайте объект с ключами из массива
+
+let users = [
+    {id: 'john', name: "John Smith", age: 20},
+    {id: 'ann', name: "Ann Smith", age: 24},
+    {id: 'pete', name: "Pete Peterson", age: 31},
+];
+
+
+// const groupById = (array) => {
+//     const groupUsers = {};
+//
+//     array.forEach((user) => groupUsers[user.id] = user);
+//
+//     return groupUsers;
+// }
+
+const groupById = (array) => {
+    const groupUsers = array.reduce((group, user) => {
+        group[user.id] = user;
+
+        return group;
+    }, {});
+
+    return groupUsers;
+}
+
+console.log(groupById(users));
